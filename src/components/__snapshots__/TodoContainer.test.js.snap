@@ -18,28 +18,89 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        Object {
-          "itemsList": undefined,
-        },
-        <button
+        <React.Fragment>
+           
+          <TodoItem
+            index={0}
+            item={
+              Object {
+                "isComplete": false,
+                "isDeleted": false,
+                "isSuccess": false,
+                "name": "test",
+              }
+            }
+            update={[Function]}
+          />
+           
+        </React.Fragment>,
+        <WithStyles(Button)
           className="addUserButton"
+          color="primary"
           onClick={[Function]}
+          variant="raised"
         >
            
           Add Item
            
-        </button>,
+        </WithStyles(Button)>,
       ],
     },
     "ref": null,
     "rendered": Array [
       Object {
-        "itemsList": undefined,
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            " ",
+            Array [
+              <TodoItem
+                index={0}
+                item={
+                  Object {
+                    "isComplete": false,
+                    "isDeleted": false,
+                    "isSuccess": false,
+                    "name": "test",
+                  }
+                }
+                update={[Function]}
+              />,
+            ],
+            " ",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          " ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "index": 0,
+              "item": Object {
+                "isComplete": false,
+                "isDeleted": false,
+                "isSuccess": false,
+                "name": "test",
+              },
+              "update": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          " ",
+        ],
+        "type": Symbol(react.fragment),
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
           "children": Array [
             " ",
@@ -47,7 +108,9 @@ ShallowWrapper {
             " ",
           ],
           "className": "addUserButton",
+          "color": "primary",
           "onClick": [Function],
+          "variant": "raised",
         },
         "ref": null,
         "rendered": Array [
@@ -55,7 +118,7 @@ ShallowWrapper {
           "Add Item",
           " ",
         ],
-        "type": "button",
+        "type": [Function],
       },
     ],
     "type": "div",
@@ -67,28 +130,89 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          Object {
-            "itemsList": undefined,
-          },
-          <button
+          <React.Fragment>
+             
+            <TodoItem
+              index={0}
+              item={
+                Object {
+                  "isComplete": false,
+                  "isDeleted": false,
+                  "isSuccess": false,
+                  "name": "test",
+                }
+              }
+              update={[Function]}
+            />
+             
+          </React.Fragment>,
+          <WithStyles(Button)
             className="addUserButton"
+            color="primary"
             onClick={[Function]}
+            variant="raised"
           >
              
             Add Item
              
-          </button>,
+          </WithStyles(Button)>,
         ],
       },
       "ref": null,
       "rendered": Array [
         Object {
-          "itemsList": undefined,
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              " ",
+              Array [
+                <TodoItem
+                  index={0}
+                  item={
+                    Object {
+                      "isComplete": false,
+                      "isDeleted": false,
+                      "isSuccess": false,
+                      "name": "test",
+                    }
+                  }
+                  update={[Function]}
+                />,
+              ],
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            " ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "index": 0,
+                "item": Object {
+                  "isComplete": false,
+                  "isDeleted": false,
+                  "isSuccess": false,
+                  "name": "test",
+                },
+                "update": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            " ",
+          ],
+          "type": Symbol(react.fragment),
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
             "children": Array [
               " ",
@@ -96,7 +220,9 @@ ShallowWrapper {
               " ",
             ],
             "className": "addUserButton",
+            "color": "primary",
             "onClick": [Function],
+            "variant": "raised",
           },
           "ref": null,
           "rendered": Array [
@@ -104,7 +230,7 @@ ShallowWrapper {
             "Add Item",
             " ",
           ],
-          "type": "button",
+          "type": [Function],
         },
       ],
       "type": "div",
