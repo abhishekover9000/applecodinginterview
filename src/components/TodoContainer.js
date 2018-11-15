@@ -7,7 +7,8 @@ import Button from "@material-ui/core/Button";
 class TodoContainer extends Component {
   state = {
     items: [],
-    isUserAddingNewItem: false
+    isUserAddingNewItem: false,
+    timeOut: null
   };
 
   toggleUserAdd = () => {
@@ -62,7 +63,10 @@ class TodoContainer extends Component {
         item.isDeleteInGrace = true;
         break;
     }
-    this.setState({ items: this.state.items });
+
+    this.setState({
+      items: this.state.items
+    });
   };
 
   render() {
@@ -70,23 +74,27 @@ class TodoContainer extends Component {
 
     const itemsList = items.map((item, i) => {
       if (!item.isDeleted) {
-        return <TodoItem item={item} index={i} update={this.updateItem} />;
+        return (
+          <TodoItem key={i} item={item} index={i} update={this.updateItem} />
+        );
       }
     });
     return (
       <div>
-        {items.length > 0 ? (
-          <React.Fragment> {itemsList} </React.Fragment>
-        ) : (
-          <div> "Nothing to do yet.." </div>
-        )}
+        <div className="itemList">
+          {items.length > 0 ? (
+            <React.Fragment> {itemsList} </React.Fragment>
+          ) : (
+            <div> "Nothing to do yet.." </div>
+          )}
+        </div>
         {isUserAddingNewItem ? (
           <TodoAddItem addItem={this.addNewItem} />
         ) : (
           <Button
             className="addUserButton"
             color="primary"
-            variant="raised"
+            variant="contained"
             onClick={this.toggleUserAdd}
           >
             {" "}

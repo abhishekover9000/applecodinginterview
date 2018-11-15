@@ -11,14 +11,6 @@ class TodoItem extends Component {
   render() {
     const { item } = this.props;
 
-    if (item.isDeleteInGrace)
-      setTimeout(
-        function() {
-          this.updateItem(constants.DELETE);
-        }.bind(this),
-        3000
-      );
-
     return (
       <Grid
         container
@@ -40,6 +32,7 @@ class TodoItem extends Component {
             <Button
               variant="text"
               color="secondary"
+              className="notsuccessButton"
               onClick={this.updateItem.bind(this, constants.NOT_SUCCESS)}
             >
               {" "}
@@ -49,6 +42,7 @@ class TodoItem extends Component {
             <Button
               variant="text"
               color="primary"
+              className="successButton"
               onClick={this.updateItem.bind(this, constants.SUCCESS)}
             >
               Successful{" "}

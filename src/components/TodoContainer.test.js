@@ -1,17 +1,10 @@
 import React from "react";
 import { shallow, configure } from "enzyme";
 import TodoContainer from "./TodoContainer";
+import { itemsData } from "./itemsData";
 
 describe("TodoContainer", () => {
   const app = shallow(<TodoContainer />);
-  const itemsData = [
-    {
-      name: "test",
-      isComplete: false,
-      isSuccess: false,
-      isDeleted: false
-    }
-  ];
 
   it("renders properly", () => {
     expect(app).toMatchSnapshot();
